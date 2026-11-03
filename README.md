@@ -11,13 +11,10 @@ supplier label with lot number and expiry date.
 
 ## How it works
 
-```mermaid
-flowchart TB
-    A["Label photos<br/>phone or PC"] -->|upload| B["Odoo 19<br/>module parse_receipt"]
-    B -->|photo, label schema, catalog| C["Parse service, FastAPI<br/>1 Reading, 2 Matching, 3 Choice"]
-    C -->|JSON| B
-    B --> D["Receipt filled in<br/>uncertain data flagged"]
-```
+1. **Upload** — in Odoo the operator uploads the label photos (*Receipt from photos* menu or *Read labels* button).
+2. **Send** — Odoo sends each photo, the label schema and the product catalog to the Parse service.
+3. **Read, match, choose** — Parse reads the label with several AI agents, matches supplier and product, and returns JSON.
+4. **Fill in** — Odoo fills in the receipt (supplier, moves, lots, expiry dates, quantities) and flags uncertain data in the chatter.
 
 **Reading** — several AI agents (Gemini) read the same photo in parallel against a JSON Schema
 (`parse_receipt/schemas/label.json`). Their answers are merged field by field with an agreement score.
