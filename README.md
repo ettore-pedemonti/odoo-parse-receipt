@@ -12,11 +12,11 @@ supplier label with lot number and expiry date.
 ## How it works
 
 ```mermaid
-flowchart LR
-    A["Phone or PC<br/>label photos"] -->|Receipt from photos<br/>or Read labels| B["Odoo 19<br/>module parse_receipt"]
-    B -->|photo + label schema + catalog| C["Parse service, FastAPI<br/>1. Reading: N AI agents read the label<br/>2. Matching: supplier + product shortlist<br/>3. Choice: AI picks a product code or none"]
+flowchart TB
+    A["Label photos<br/>phone or PC"] -->|upload| B["Odoo 19<br/>module parse_receipt"]
+    B -->|photo, label schema, catalog| C["Parse service, FastAPI<br/>1 Reading, 2 Matching, 3 Choice"]
     C -->|JSON| B
-    B --> D["Receipt filled in<br/>supplier, moves, lots, expiry, quantity<br/>uncertain data flagged in the chatter"]
+    B --> D["Receipt filled in<br/>uncertain data flagged"]
 ```
 
 **Reading** — several AI agents (Gemini) read the same photo in parallel against a JSON Schema
