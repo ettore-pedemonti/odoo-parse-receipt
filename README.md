@@ -11,17 +11,12 @@ supplier label with lot number and expiry date.
 
 ## How it works
 
-```
- Phone / PC                 Odoo 19 (module parse_receipt)                 Parse service (FastAPI)
- ──────────                 ──────────────────────────────                 ───────────────────────
- label photos  ──────────►  Receipt from photos / Read labels
-                            sends photo + label schema + catalog  ──────►  1. Reading   N AI agents read the label
-                                                                           2. Matching  supplier + product shortlist
-                                                                           3. Choice    AI picks a product code or "none"
-                            receives JSON  ◄──────────────────────────────
-                            fills in the receipt:
-                            supplier, moves, lots, expiry, quantity
-                            flags uncertain data in the chatter
+```mermaid
+flowchart LR
+    A["Phone or PC<br/>label photos"] -->|Receipt from photos<br/>or Read labels| B["Odoo 19<br/>module parse_receipt"]
+    B -->|photo + label schema + catalog| C["Parse service, FastAPI<br/>1. Reading: N AI agents read the label<br/>2. Matching: supplier + product shortlist<br/>3. Choice: AI picks a product code or none"]
+    C -->|JSON| B
+    B --> D["Receipt filled in<br/>supplier, moves, lots, expiry, quantity<br/>uncertain data flagged in the chatter"]
 ```
 
 **Reading** — several AI agents (Gemini) read the same photo in parallel against a JSON Schema
@@ -55,7 +50,7 @@ row turns yellow in the **Parse photos** tab.
 - **Read labels** button on any receipt, including receipts created from purchase orders
 - Quantities converted to the product unit (5 kg → 5000 g); month/year expiry dates set to the last day of the month
 - One move per product, one detailed line per lot, expiry date written on the lot
-- Works from a phone browser: the upload field opens the camera
+- Works from a phone browser: upload one or more label photos at once
 - Photos kept as receipt attachments for traceability
 - English source, Italian translation included (`i18n/it.po`)
 
@@ -80,7 +75,7 @@ compose.yaml            Odoo + PostgreSQL + Parse for local testing
 Requirements: Docker with Docker Compose, a Google Gemini API key.
 
 ```bash
-git clone <this repository> odoo-parse-receipt
+git clone https://github.com/ettore-pedemonti/odoo-parse-receipt.git
 cd odoo-parse-receipt
 cp parse-service/.env.example parse-service/.env     # then set GEMINI_API_KEY
 docker compose up -d --build
