@@ -1,0 +1,14 @@
+# secrets
+.env
+# Python cache
+__pycache__/
+*.pyc
+# business data and test files: never in the repository
+*.xlsx
+*.zip
+*.jpg
+*.jpeg
+anagrafica*.json
+# the only image allowed is the module icon
+*.png
+!parse_receipt/static/description/icon.png

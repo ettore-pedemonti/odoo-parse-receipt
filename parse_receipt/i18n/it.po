@@ -1,0 +1,401 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* parse_receipt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20261015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-02 15:46+0000\n"
+"PO-Revision-Date: 2026-11-02 15:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid "%s photos with the same lot: check the number of containers"
+msgstr "%s foto con lo stesso lotto: verifica il numero di contenitori"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Agents disagree on the product: check it"
+msgstr "Agenti non d'accordo sull'articolo: controllalo"
+
+#. module: parse_receipt
+#: model_terms:ir.ui.view,arch_db:parse_receipt.parse_receipt_upload_view_form
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Check the expiry date (%s)"
+msgstr "Scadenza da controllare (%s)"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Check the lot (%s)"
+msgstr "Lotto da controllare (%s)"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Check the quantity (%s)"
+msgstr "Quantità da controllare (%s)"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__checksum
+msgid "Checksum/SHA1"
+msgstr "Impronta (SHA1)"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__confidence
+msgid "Confidence"
+msgstr "Affidabilità"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__create_uid
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_upload__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__create_date
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_upload__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid "Different expiry dates on the same lot: check them"
+msgstr "Scadenze diverse sullo stesso lotto: controlla"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__display_name
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_upload__display_name
+#: model:ir.model.fields,field_description:parse_receipt.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__error_message
+#: model:ir.model.fields.selection,name:parse_receipt.selection__parse_receipt_photo__state__error
+msgid "Error"
+msgstr "Errore"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Expiry date already past (%s): check the label"
+msgstr "Scadenza letta già passata (%s): controlla l'etichetta"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid ""
+"Expiry date more than %(years)s years ahead (%(date)s): check the label"
+msgstr "Scadenza letta oltre %(years)s anni (%(date)s): controlla l'etichetta"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid "Expiry date not read: enter it manually"
+msgstr "Scadenza non letta: inseriscila a mano"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__name
+msgid "File name"
+msgstr "Nome file"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__id
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_upload__id
+#: model:ir.model.fields,field_description:parse_receipt.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Invalid expiry date on the label: %s"
+msgstr "Scadenza non valida sull'etichetta: %s"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Label in %(unit)s, product in %(uom)s: enter the quantity manually"
+msgstr "Etichetta in %(unit)s, articolo in %(uom)s: quantità da inserire a mano"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid "Label: %(label)s; receipt: %(receipt)s"
+msgstr "Sull'etichetta: %(label)s; sul ricevimento: %(receipt)s"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__write_uid
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_upload__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__write_date
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_upload__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__applied
+msgid "Line created"
+msgstr "Riga creata"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__line_warning
+msgid "Line warning"
+msgstr "Avviso riga"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid "Lot not read: enter it manually"
+msgstr "Lotto non letto: inseriscilo a mano"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/wizard/parse_receipt_upload.py:0
+msgid "No Receipts operation type found for this company."
+msgstr "Nessun tipo di operazione Ricezioni trovato per questa azienda."
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "No answer from Parse within %s seconds"
+msgstr "Nessuna risposta da Parse entro %s secondi"
+
+#. module: parse_receipt
+#: model_terms:ir.ui.view,arch_db:parse_receipt.parse_receipt_upload_view_form
+msgid ""
+"One photo per container. On a phone you can take them directly. Without new "
+"photos, \"Upload and read\" reads again the photos still to read or in "
+"error."
+msgstr "Una foto per contenitore. Dal telefono puoi scattarle direttamente. Senza foto nuove, «Carica e leggi» rilegge quelle da leggere o in errore."
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Parse error %(status)s: %(detail)s"
+msgstr "Errore %(status)s da Parse: %(detail)s"
+
+#. module: parse_receipt
+#: model:ir.model,name:parse_receipt.model_parse_receipt_photo
+msgid "Parse label photo"
+msgstr "Foto Parse di un'etichetta"
+
+#. module: parse_receipt
+#: model:ir.model,name:parse_receipt.model_parse_receipt_upload
+msgid "Parse photo upload"
+msgstr "Caricamento foto Parse"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_stock_picking__parse_photo_ids
+#: model_terms:ir.ui.view,arch_db:parse_receipt.view_picking_form_parse
+msgid "Parse photos"
+msgstr "Foto Parse"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__result_json
+msgid "Parse response"
+msgstr "Risposta di Parse"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Parse service unreachable"
+msgstr "Servizio Parse non raggiungibile"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid "Parse: %(lines)s lines filled in from %(photos)s photos."
+msgstr "Parse: compilate %(lines)s righe da %(photos)s foto."
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid "Parse: %(read)s photos read, %(errors)s with errors."
+msgstr "Parse: %(read)s foto lette, %(errors)s con errore."
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid "Parse: data to check before Validate"
+msgstr "Parse: dati da controllare prima di Valida"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/wizard/parse_receipt_upload.py:0
+msgid "Parse: photos discarded, already uploaded on this receipt: %s"
+msgstr "Parse: foto scartate perché già caricate su questo ricevimento: %s"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/wizard/parse_receipt_upload.py:0
+msgid "Parse: photos discarded, uploaded twice: %s"
+msgstr "Parse: foto scartate perché caricate due volte: %s"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid "Parse: photos from different suppliers on this receipt: %s"
+msgstr "Parse: foto di fornitori diversi su questo ricevimento: %s"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/wizard/parse_receipt_upload.py:0
+msgid "Parse: receipt created from %s photos (Receipt from photos)."
+msgstr "Parse: ricevimento creato da %s foto (Entrata da foto)."
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__attachment_id
+msgid "Photo"
+msgstr "Foto"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_upload__attachment_ids
+msgid "Photos"
+msgstr "Foto"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__product_id
+msgid "Product"
+msgstr "Articolo"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Product not recognised: add the line manually"
+msgstr "Articolo non riconosciuto: aggiungi la riga a mano"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Quantity not read: enter it manually"
+msgstr "Quantità non letta: inseriscila a mano"
+
+#. module: parse_receipt
+#: model:ir.model.fields.selection,name:parse_receipt.selection__parse_receipt_photo__state__done
+msgid "Read"
+msgstr "Letta"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+#: model_terms:ir.ui.view,arch_db:parse_receipt.parse_receipt_upload_view_form
+#: model_terms:ir.ui.view,arch_db:parse_receipt.view_picking_form_parse
+msgid "Read labels"
+msgstr "Leggi etichette"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__label_text
+msgid "Read on label"
+msgstr "Letto sull'etichetta"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__picking_id
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_upload__picking_id
+msgid "Receipt"
+msgstr "Ricevimento"
+
+#. module: parse_receipt
+#: model:ir.actions.act_window,name:parse_receipt.action_parse_receipt_from_photos
+#: model:ir.ui.menu,name:parse_receipt.menu_parse_receipt_from_photos
+msgid "Receipt from photos"
+msgstr "Entrata da foto"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/wizard/parse_receipt_upload.py:0
+msgid "Receipts from photos"
+msgstr "Ricevimenti da foto"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__state
+msgid "Status"
+msgstr "Stato"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Supplier not recognised (read: %s)"
+msgstr "Fornitore non riconosciuto (letto: %s)"
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__supplier_id
+msgid "Supplier read"
+msgstr "Fornitore letto"
+
+#. module: parse_receipt
+#: model:ir.model.fields.selection,name:parse_receipt.selection__parse_receipt_photo__state__to_read
+msgid "To read"
+msgstr "Da leggere"
+
+#. module: parse_receipt
+#: model:ir.model,name:parse_receipt.model_stock_picking
+msgid "Transfer"
+msgstr "Trasferimento"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Uncertain expiry date, different readings (%s): enter it manually"
+msgstr "Scadenza incerta, letture diverse (%s): inseriscila a mano"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Uncertain lot, different readings (%s): enter it manually"
+msgstr "Lotto incerto, letture diverse (%s): inseriscilo a mano"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/parse_receipt_photo.py:0
+msgid "Uncertain quantity, different readings (%s): enter it manually"
+msgstr "Quantità incerta, letture diverse (%s): inseriscila a mano"
+
+#. module: parse_receipt
+#: model_terms:ir.ui.view,arch_db:parse_receipt.parse_receipt_upload_view_form
+msgid "Upload and read"
+msgstr "Carica e leggi"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/wizard/parse_receipt_upload.py:0
+msgid "Upload at least one photo."
+msgstr "Carica almeno una foto."
+
+#. module: parse_receipt
+#: model:ir.model.fields,field_description:parse_receipt.field_parse_receipt_photo__warning
+msgid "Warning"
+msgstr "Avviso"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/wizard/parse_receipt_upload.py:0
+msgid "id"
+msgstr "id"
+
+#. module: parse_receipt
+#. odoo-python
+#: code:addons/parse_receipt/models/stock_picking.py:0
+msgid ""
+"reading failed (%s). Use Read labels > Upload and read to retry, or add the "
+"line manually"
+msgstr "lettura non riuscita (%s). Usa Leggi etichette > Carica e leggi per riprovare, oppure aggiungi la riga a mano"

@@ -1,0 +1,11 @@
+# AI provider
+google-genai==2.34.0
+
+# extraction engine
+rapidfuzz==3.14.3
+jsonschema==4.25.1
+pillow==11.3.0
+
+# HTTP server
+fastapi==0.115.12
+uvicorn==0.34.2

@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "title": "container_label",
+  "description": "Data read from the label of a raw-material container, photographed at goods receipt. Report only what is printed and legible: an empty or null field is a correct answer, a deduced or invented value is not.",
+  "additionalProperties": false,
+  "required": [
+    "supplier",
+    "printed_name",
+    "product_name",
+    "lot",
+    "expiry_day",
+    "expiry_month",
+    "expiry_year",
+    "net_quantity",
+    "unit"
+  ],
+  "properties": {
+    "supplier": {
+      "type": "string",
+      "description": "Supplier or manufacturer name printed on the label (logo, header or address). Empty string if absent."
+    },
+    "printed_name": {
+      "type": "string",
+      "description": "Product name exactly as printed, in all languages present, separated by ' / '."
+    },
+    "product_name": {
+      "type": "string",
+      "description": "Product name in the language of the warehouse catalog (Italian), without codes, weights or hazard statements. Used to match the catalog."
+    },
+    "lot": {
+      "type": "string",
+      "description": "Lot number (LOT, BATCH, LOTTO, L.) exactly as printed, without the preceding word. Empty string if absent or illegible: never derive it from other codes."
+    },
+    "expiry_day": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "maximum": 31,
+      "description": "Day of the EXPIRY date. null if the label shows only month and year, or has no expiry date."
+    },
+    "expiry_month": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "maximum": 12,
+      "description": "Month of the EXPIRY date, 1 to 12. Only from the date next to EXP, EXPIRY, USE BY, BEST BEFORE, SCAD., SCADENZA, DA CONSUMARSI. Ignore production (PROD., MFG, MFD), analysis or packing dates and lot digits. null if there is no legible expiry date."
+    },
+    "expiry_year": {
+      "type": ["integer", "null"],
+      "minimum": 2000,
+      "maximum": 2100,
+      "description": "Year of the EXPIRY date, four digits (26 becomes 2026). Same rules as the month: only from the expiry wording, never from production, analysis or lot. null if there is no legible expiry date."
+    },
+    "net_quantity": {
+      "type": ["number", "null"],
+      "description": "NET quantity of the container (NET, NETTO, PESO NETTO). Never gross (GROSS, LORDO) or tare (TARE, TARA). Decimal point: '5,000 kg' becomes 5. null if the net quantity is absent or illegible."
+    },
+    "unit": {
+      "type": "string",
+      "enum": ["kg", "g", "l", "ml"],
+      "description": "Unit of the net quantity."
+    }
+  }
+}

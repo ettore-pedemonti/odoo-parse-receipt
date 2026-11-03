@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Photo upload dialog -->
+    <record id="parse_receipt_upload_view_form" model="ir.ui.view">
+        <field name="name">parse.receipt.upload.form</field>
+        <field name="model">parse.receipt.upload</field>
+        <field name="arch" type="xml">
+            <form string="Read labels">
+                <field name="picking_id" invisible="1"/>
+                <p>One photo per container. On a phone you can take them directly. Without new photos, "Upload and read" reads again the photos still to read or in error.</p>
+                <!-- image/* = images only; on a phone the camera is offered -->
+                <field name="attachment_ids" widget="many2many_binary" nolabel="1"
+                       options="{'accepted_file_extensions': 'image/*'}"/>
+                <footer>
+                    <button name="action_load" type="object" string="Upload and read" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Receipt from photos: the same dialog, without a receipt -->
+    <record id="action_parse_receipt_from_photos" model="ir.actions.act_window">
+        <field name="name">Receipt from photos</field>
+        <field name="res_model">parse.receipt.upload</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Inventory > Operations > Receipt from photos, in the Transfers group before Receipts -->
+    <menuitem id="menu_parse_receipt_from_photos"
+              name="Receipt from photos"
+              parent="stock.menu_stock_transfers"
+              action="action_parse_receipt_from_photos"
+              sequence="19"
+              groups="stock.group_stock_user"/>
+</odoo>

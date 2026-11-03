@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_parse_receipt_photo_user,parse.receipt.photo inventory user,model_parse_receipt_photo,stock.group_stock_user,1,1,1,1
+access_parse_receipt_upload_user,parse.receipt.upload inventory user,model_parse_receipt_upload,stock.group_stock_user,1,1,1,1
